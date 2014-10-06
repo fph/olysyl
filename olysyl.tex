@@ -2,6 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
+\usepackage{csquotes}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[utf8]{inputenc}
@@ -20,7 +21,7 @@
 
 \date{}
 \title{Programma non ufficiale per le Olimpiadi Italiane di Matematica}
-\subtitle{Versione 0.3}
+\subtitle{Versione 0.4}
 \author{Federico Poloni \href{mailto:fpoloni@di.unipi.it}{\texttt{<fpoloni@di.unipi.it>}}}
 
 \begin{document}
@@ -39,10 +40,10 @@
 
  Maggiori dettagli sul tema ``cosa serve sapere nelle gare'' e ``come prepararsi'' si trovano in fondo a questo documento. TL;DR: \textbf{non studiate troppa teoria; fate molti problemi e leggete molte soluzioni}.
  
-\section{Legenda}
-Sono segnati con una stella \star{} alcuni argomenti extra che capitano solo in rari problemi. Sono indicati con due stelle \sstar{} argomenti ``ancora più extra'' che solitamente \emph{non} sono considerati fatti noti ai concorrenti (anzi, alcuni problemi vengono scartati perché ``per farlo bisogna sapere per forza X''), ma che possono capitare in qualche raro caso, per esempio nei problemi di Cesenatico con numeri più alti. Dubito che servano prima di Cesenatico.
+\section*{Legenda}
+Sono segnati con una stella \star{} alcuni argomenti extra che capitano solo in pochi problemi. Sono indicati con due stelle \sstar{} argomenti ``ancora più extra'' che solitamente \emph{non} sono considerati fatti noti ai concorrenti (anzi, alcuni problemi vengono scartati perché ``per farlo bisogna sapere per forza X''), ma che possono capitare in qualche raro caso, per esempio nei problemi di Cesenatico con numeri più alti. Dubito che servano prima di Cesenatico.
 
-Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o quasi) cose insegnate nei primi anni delle scuole superiori.
+Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o quasi) cose insegnate nei primi anni delle scuole superiori; un'eccezione sono le congruenze, che pur capitando di frequente nelle gare non vengono insegnate in molte scuole.
 
 \section{Algebra}
 \begin{itemize}
@@ -53,7 +54,7 @@ Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o 
  \item Proprietà delle potenze (es. $a^n\cdot a^m = a^{n+m}$).
  \item Fattorizzare polinomi e raccogliere espressioni comuni.
  \item Scomposizioni notevoli: $(a^n \pm b^n) / (a\pm b)$.
- \item Potenze di un binomio e triangolo di Tartaglia (anche detto di Fermat).
+ \item Potenze di un binomio e triangolo di Tartaglia (anche detto di Pascal).
  \item Quadrato di un trinomio.
  \item Grado di un polinomio e suo comportamento rispetto alle operazioni.
  \item Manipolazione di polinomi. Divisione tra polinomi (con resto). Regola di Ruffini (se $p(a)=0$, allora $p(x)$ è multiplo di $x-a$).
@@ -83,7 +84,7 @@ Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o 
  \item Operazioni con numeri pari e dispari (es. $P\cdot D=P$).
  \item Comportamento dell'ultima cifra rispetto alle operazioni (cioè, congruenze modulo 10).
  \item Idea intuitiva di ``resto della divisione'' e suo comportamento.
- \item \sstar Congruenze in generale, comportamento rispetto a somme e prodotti.
+ \item \star Congruenze in generale, comportamento rispetto a somme e prodotti.
 \end{itemize}
 
 \section{Geometria}
@@ -111,7 +112,7 @@ Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o 
  \item \sstar{} Formula di Erone.
  \item Rotazioni e simmetrie assiali.
  \item \star{} Similitudini (omotetie). Comportamento di lunghezze e aree sotto similitudine.
- \item \star{} Definizione di luogo; aver visto almeno una volta nella vita una dimostrazione (sintetica!) della caratterizzazione di un luogo. Necessità di provare entrambi i versi (se $P$ sta nel luogo, allora soddisfa la proprietà; se $P$ non sta sul luogo, allora non la soddisfa).
+ \item \star{} Definizione di luogo; aver visto almeno una volta nella vita una dimostrazione (sintetica!) della caratterizzazione di un luogo. Necessità di dimostrare entrambi i versi (se $P$ sta nel luogo, allora soddisfa la proprietà; se $P$ non sta sul luogo, allora non la soddisfa).
  \item Caratterizzazione di assi e bisettrici come luoghi.
  \item Geometria solida: nozione e visione intuitiva in 3D dei solidi.
  \item  Volume del prisma e della piramide (inclusi cono e cilindro).
@@ -135,9 +136,11 @@ Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o 
 
 \section{Altro}
 \begin{itemize}
- \item Logica elementare: e (AND), o (OR), se\dots{}allora, condizioni necessarie o sufficienti. Provare $A \implies B$ attraverso $\operatorname{not}(B)\implies \operatorname{not}(A)$. Aver visto una volta nella vita una dimostrazione per assurdo.
+ \item Logica elementare: e (AND), o (OR), se\dots{}allora, condizioni necessarie o sufficienti. Dimostrare $A \implies B$ attraverso $\operatorname{not}(B)\implies \operatorname{not}(A)$. Aver visto una volta nella vita una dimostrazione per assurdo.
+ \item Nella dimostrazione di un ``se e solo se'' bisogna far vedere entrambe le direzioni.
+ \item Similmente, per dimostrare che due insiemi sono uguali (``le soluzioni dell'equazione X sono Y'') servono due ``direzioni'' (ogni soluzione di X è un Y, e ogni Y risolve X).
  \item Aver visto un problema di cavalieri e furfanti.
- \item Saper riempire una ``tavola della verità''.
+ \item Saper riempire una ``tavola di verità''.
  \item \star{} Idea intuitiva di dimostrazione per induzione (``e così via'').
  \item \sstar{} Induzione formalizzata un po' meglio.
  \item Idea intuitiva di principio dei cassetti (anche noto come \emph{pigeonhole principle} o principio di Dirichlet): se ho $n+1$ palline divise tra $n$ scatole\dots
@@ -145,7 +148,7 @@ Gli argomenti senza stelline o con una stellina sola dovrebbero essere tutte (o 
  \item Disegnare diagrammi spazio/tempo e interpretarli (velocità $=$ pendenza della retta\dots).
 \end{itemize}
 
-\section{Postfazione}
+\section*{Postfazione}
  
 \paragraph{Conoscenze e idee} Ci sono due situazioni opposte in cui si può trovare uno studente che affronta per la prima volta le Olimpiadi di Matematica. Alcuni vedono i problemi, notano che sono diverso da quelli dei libri di testo di matematica in cui basta leggere il capitolo prima per capire come si fanno a colpo sicuro, e si chiedono: \emph{``Cosa devo studiare? Non ho mai visto questi problemi; non li abbiamo fatti a scuola!''}. Altri magari sono capitati sul forum delle Olimpiadi~\cite{oliforum} o a uno stage locale, o hanno visto un libro come~\cite{schedeolimpiche}, o hanno visto altri concorrenti usare una quantità mastodontica di teoria, e si chiedono: \emph{``La gente qui parla di disuguaglianza di Cauchy-Schwarz e di Nullstellensatz combinatorico come se fossero cose semplicissime, e io che non le so come mai farò?''}.
  
@@ -171,7 +174,7 @@ Studiando quella poca teoria che serve sui testi scolastici o su libri come \cit
  
  Quindi, non traete indicazioni negative sul vostro talento in matematica dal fatto di non riuscire ad arrivare tra i primi in Italia in queste gare; l'insieme $\{\text{matematici di successo}\}$ e quello $\{\text{ex-concorrenti delle olimpiadi}\}$ non coincidono; moltissimi matematici di professione non hanno mai partecipato a queste gare o non hanno mai ottenuto grandi successi.
  
- Traete, semmai, indicazioni \emph{positive}: se vi interessate alle olimpiadi, vuol dire che fare matematica tutto sommato non vi dispiace; perché non continuare a farne anche più avanti nella vita?
+ Traete, semmai, indicazioni \emph{positive}: se vi interessate alle olimpiadi, vuol dire che fare matematica tutto sommato non vi dispiace; perché non continuare?
 
 \paragraph{La via alta e la via bassa}
 Le OdM in Italia in questo momento sono strutturate su due percorsi paralleli:
